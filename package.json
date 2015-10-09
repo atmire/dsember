@@ -1,6 +1,6 @@
 {
   "name": "dsember",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Small description for dsember goes here",
   "private": true,
   "directories": {
@@ -35,6 +35,7 @@
     "ember-cli-uglify": "^1.2.0",
     "ember-data": "1.13.8",
     "ember-disable-proxy-controllers": "^1.0.0",
-    "ember-export-application-global": "^1.0.3"
+    "ember-export-application-global": "^1.0.3",
+    "dsember-core": "0.1.0"
   }
 }
