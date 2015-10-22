@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   coreMap(this);
+
+  this.route('collection', {}, function() {});
 });
 
 export default Router;
