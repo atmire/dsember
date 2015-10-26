@@ -19,6 +19,10 @@ module.exports = function(environment) {
     },
     i18n: {
       defaultLocale: 'en'
+    },
+    contentSecurityPolicy: { // see http://content-security-policy.com/
+      'img-src': "'self' data:", //data: needed for holder.js
+      'style-src': "'self' 'unsafe-inline'"  //unsafe-inline needed for holder.js
     }
   };
 
