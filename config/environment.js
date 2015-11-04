@@ -25,7 +25,7 @@ module.exports = function(environment) {
       'style-src': "'self' 'unsafe-inline'"  //unsafe-inline needed for holder.js
     },
     flashMessageDefaults: {
-      timeout: 10000,
+      timeout: 5000,
       extendedTimeout: 300,
       priority: 100,
       sticky: false,
