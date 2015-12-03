@@ -97,7 +97,7 @@ If you simply want to customize the existing theme for the local install:
  
 
 ### As an addon
-If you want create theme that can be used by others,  it's best to put it in its own addon. This addon should be imported in dsember's `package.json` , below dsember-core.
+If you want create theme that can be used by others,  it's best to put it in its own addon. This addon should be imported in dsember's `package.json`, below dsember-core.
 
 * Create a new addon for your theme:
 	* `ember addon [theme name]`
