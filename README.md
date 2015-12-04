@@ -1,7 +1,7 @@
 # Dsember
 
-## Demo
 You can find a demo instance of this prototype at [dsember.atmire.com](http://dsember.atmire.com)
+The answers to the prototype challenge questions can be be found on the [wiki](https://github.com/atmire/dsember/wiki) 
 
 ## Introduction
 This prototype is written in [Ember JS](http://emberjs.com/), using [Ember CLI](http://www.ember-cli.com/). Ember CLI is a command line utility to help set-up, organize, scaffold and build Ember projects. It's comparable to [yeoman](http://yeoman.io/), or the `rails` command for Ruby on Rails apps
@@ -140,7 +140,9 @@ ember-simple-auth allows you make a route accessible to authenticated users only
 
 For example, see the [edit item route](https://github.com/atmire/dsember-core/blob/master/addon/routes/items/item/edit.js)
 
-While it is possible to support more complicated authentication flows using only simple-auth, I'd consider including [torii](http://vestorly.github.io/torii/) to support SSO using Shibboleth for example. Torii also has support for things like sharing information between a popup and the ember app.
+While it is possible to support more complicated authentication flows using only simple-auth, I'd consider including [torii](http://vestorly.github.io/torii/). It also has support for things like sharing information between a popup and the ember app.
+
+So to include support for shibboleth for example, you could make torrii open the /shibboleth-login url in a separate browser window (i.e. a regular webpage, outside the javascript app), at which point mod_shib takes over and redirects to the IDP, have the user login, and use torrii to fetch the info returned from the IDP in that window to be able to pass it to ember-simple-auth, which can send it to a (yet to be implemented) shibboleth REST API endpoint that takes that info and returns a regular authentication token. That token can be used from that point on to perform actions that need authorization.
 
 ## Further Reading / Useful Links
 
